@@ -14,10 +14,11 @@ export default class FrontPage extends React.Component{
 
   handleAddressChange(e){
     const address = e.target.value
+    const encodedAddress = encodeURI(address)
     let latitude
     let longitude
     this.setState({address, errMsg:false})
-    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyCBFeTapwu6gxLcxCiXuqKQ83-ER7pitP8`, {
+    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}&key=AIzaSyCBFeTapwu6gxLcxCiXuqKQ83-ER7pitP8`, {
     	method: 'get'
     }).then(function(response) {
     	return response.json();
