@@ -1,7 +1,7 @@
 import React from 'react'
 import Meteor from 'meteor/meteor'
 
-export default class FrontPage extends React.Component{
+export default class GeoForm extends React.Component{
   constructor(props){
     super(props)
     this.state={
@@ -42,9 +42,9 @@ export default class FrontPage extends React.Component{
     return(
       <div>
         {this.state.errMsg?<p>No Latitude and Longitude Found</p>:undefined}
-        <input type="text" className="" placeholder="Address" onChange={this.handleAddressChange.bind(this)} value={this.state.address} />
-        <p style={{backgroundColor:"#dddddd"}}>{this.state.latitude?this.state.latitude:"Latitude"}</p>
-        <p style={{backgroundColor:"#dddddd"}}>{this.state.longitude?this.state.longitude:"Longitude"}</p>
+        <input type="text" id="address" placeholder="Address" onChange={this.handleAddressChange.bind(this)} value={this.state.address} />
+        <p id="lat" style={{backgroundColor:"#dddddd"}}>{this.state.latitude?this.state.latitude:"Latitude"}</p>
+        <p id="lng" style={{backgroundColor:"#dddddd"}}>{this.state.longitude?this.state.longitude:"Longitude"}</p>
       </div>
     )
   }
