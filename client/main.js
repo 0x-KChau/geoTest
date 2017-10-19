@@ -1,11 +1,6 @@
 import {Meteor} from 'meteor/meteor';
-import {Sesson} from 'meteor/session';
-import createHistory from 'history/createBrowserHistory'
-import {authenticatedFunc} from '../import/routes/routes';
-
-const history = createHistory();
+import {Routes} from '../import/routes/routes';
 
 Meteor.startup(()=>{
-  const isAuthenticated = !!Meteor.userId();
-  authenticatedFunc(isAuthenticated, history)
+  Routes()
 })

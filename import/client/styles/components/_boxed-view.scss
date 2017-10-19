@@ -1,6 +1,6 @@
 .boxed-view{
   align-items: center;
-  background: $boxed-view-overlay-bg;
+  background: $purple;
   display: flex;
   justify-content: center;
   width: 100vw;
@@ -18,9 +18,22 @@
 
 .boxed-view__box{
   background-color: $boxed-view-bg;
-  padding: 2.4rem;
-  text-align: center;
-  width: 24rem;
+  padding: 2rem;
+  padding-top: 3rem;
+  width: 10rem;
+  border-radius: 1rem;
+  @media only screen and (min-width: 380px){
+    width: 15rem;
+    padding-top: 5rem;
+  }
+  @media only screen and (min-width: 480px){
+    width: 20rem;
+    padding-top: 10rem;
+  }
+  @media only screen and (min-width: 680px){
+    width: 40rem;
+    padding-top: 12rem;
+  }
 }
 
 .boxed-view__form{

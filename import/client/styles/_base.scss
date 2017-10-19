@@ -31,10 +31,24 @@ a{
   color: black;
 }
 
-input[type=text],input[type=email],input[type=password]{
+input[type=text],input[type=email],input[type=password], p{
   font-size: $base-font-size;
   margin-bottom: $space;
   padding: $input-spacing;
   border: 1px solid $input-border;
-
+  color: $dark-grey;
+  border-radius: 5px;
+  width:8rem;
+  @media only screen and (min-width: 380px){
+    width: 13rem;
+  }
+  @media only screen and (min-width: 480px){
+    width: 25rem;
+  }
+  @media only screen and (min-width: 680px){
+    width: 35rem;
+  }
+  @media only screen and (min-width: 780px){
+    width: 38rem;
+  }
 }
